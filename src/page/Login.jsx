@@ -16,7 +16,7 @@ export default function Login() {
     };
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="bg-white min-h-screen mb-5">
             {/* Header */}
             <header className="flex justify-between items-center px-4 sm:px-6 lg:px-12 py-4 bg-white border-b border-gray-200">
                 <button onClick={() => navigate("/Home")}
@@ -160,9 +160,9 @@ export default function Login() {
                     </div>
 
                     {/* Create account link */}
-                    <p className="text-center text-xs text-gray-700 mt-8">
+                    <p className="text-center  text-gray-700 mt-8 text-2xl">
                         Doesn&apos;t have an account?{" "}
-                        <a href="Signup" className="font-bold text-gray-900 hover:underline">
+                        <a href="Signup" className="font-bold text-gray-900 hover:underline text-2xl">
                             Create One
                         </a>
                     </p>

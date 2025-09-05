@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 export default function Signup() {
     const navigate = useNavigate();
-    const { signup } = useAuth(); // <-- get signup from context
+    const { signup } = useAuth(); // 
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -15,7 +15,7 @@ export default function Signup() {
 
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-    const [error, setError] = useState(""); // <-- error state
+    const [error, setError] = useState(""); 
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
