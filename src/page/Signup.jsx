@@ -2,10 +2,10 @@ import { useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaEnvelope, FaEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-import { useAuth } from "../context/AuthContext";
+
 export default function Signup() {
     const navigate = useNavigate();
-    const { signup } = useAuth(); // 
+  
     const [formData, setFormData] = useState({
         name: "",
         email: "",
