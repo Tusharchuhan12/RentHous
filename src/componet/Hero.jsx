@@ -15,7 +15,6 @@ export default function Hero() {
 
                     {/* Overlay Content */}
                     <div className="absolute inset-0 bg-opacity-30 flex flex-col justify-center items-center px-6 py-10 text-center">
-                        {/* Title */}
                         <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight max-w-4xl">
                             Find Your Dream Home in One Click!
                         </h1>
@@ -47,17 +46,17 @@ export default function Hero() {
                     </div>
 
                     {/* Filter Form - half inside, half outside */}
-                    <form className="absolute left-1/2 bottom-2 transform -translate-x-1/2 translate-y-1/2 w-full max-w-4xl flex flex-row items-center justify-center gap-4 bg-white rounded-2xl sm:rounded-full px-6 py-4 shadow-lg">
+                    <form className="absolute left-1/2 bottom-0 transform -translate-x-1/2 w-full max-w-4xl flex flex-row flex-wrap items-center justify-center gap-2 sm:gap-4 bg-white rounded-2xl sm:rounded-full px-4 sm:px-6 py-3 sm:py-4 shadow-lg z-20">
                         <select
                             aria-label="For Rent or For Sale"
-                            className="appearance-none cursor-pointer text-blue-800 text-sm font-normal rounded-full border border-gray-300 px-4 py-2 pr-5 focus:outline-none focus:ring-2 focus:ring-[#1E2A78] focus:border-transparent"
+                            className="appearance-none cursor-pointer text-blue-800 text-sm font-normal rounded-full border border-gray-300 px-3 sm:px-4 py-2 pr-5 focus:outline-none focus:ring-2 focus:ring-[#1E2A78]"
                         >
                             <option>For Rent</option>
                             <option>For Sale</option>
                         </select>
                         <select
                             aria-label="Property Type"
-                            className="appearance-none cursor-pointer text-blue-700 text-sm font-normal rounded-full border border-gray-300 px-4 py-2 pr-5 focus:outline-none focus:ring-2 focus:ring-[#1E2A78] focus:border-transparent"
+                            className="appearance-none cursor-pointer text-blue-700 text-sm font-normal rounded-full border border-gray-300 px-3 sm:px-4 py-2 pr-5 focus:outline-none focus:ring-2 focus:ring-[#1E2A78]"
                         >
                             <option>House</option>
                             <option>Apartment</option>
@@ -65,14 +64,14 @@ export default function Hero() {
                         </select>
                         <select
                             aria-label="Location"
-                            className="appearance-none cursor-pointer text-blue-700 text-sm font-normal rounded-full border border-gray-300 px-4 py-2 pr-5 focus:outline-none focus:ring-2 focus:ring-[#1E2A78] focus:border-transparent"
+                            className="appearance-none cursor-pointer text-blue-700 text-sm font-normal rounded-full border border-gray-300 px-3 sm:px-4 py-2 pr-5 focus:outline-none focus:ring-2 focus:ring-[#1E2A78]"
                         >
                             <option>Indonesia</option>
                             <option>USA</option>
                             <option>UK</option>
                         </select>
                         <button
-                            className="bg-[#1E2A78] text-white font-semibold text-sm rounded-full px-6 py-2 shadow-md hover:bg-[#16215a] transition whitespace-nowrap"
+                            className="bg-[#1E2A78] text-white font-semibold text-sm rounded-full px-5 sm:px-6 py-2 shadow-md hover:bg-[#16215a] transition whitespace-nowrap"
                         >
                             Find
                         </button>
