@@ -46,7 +46,7 @@ export default function Login() {
                     <img
                         src="https://storage.googleapis.com/a1aa/image/688a85c2-4778-4e9c-5073-acd7181df5ce.jpg"
                         alt="Modern house exterior"
-                        className="rounded-tl-3xl rounded-bl-3xl w-full max-w-lg object-cover"
+                        className="rounded-tl-3xl rounded-bl-3xl w-full max-w-lg object-cover lg:h-[700px]"
                     />
                 </section>
 

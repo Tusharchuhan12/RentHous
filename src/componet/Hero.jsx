@@ -24,10 +24,10 @@ export default function Hero() {
                         </p>
 
                         {/* Location Search */}
-                        <form className="mt-8 w-full max-w-4xl flex flex-col sm:flex-row items-center gap-4">
+                        <form className="mt-8 w-full max-w-4xl flex flex-row items-center gap-4">
                             <label
                                 htmlFor="search-location"
-                                className="flex items-center flex-grow bg-white rounded-xl px-4 py-3 text-gray-500 text-sm shadow-md max-w-full sm:max-w-[600px]"
+                                className="flex items-center flex-grow bg-white rounded-xl px-4 py-3 text-gray-500 text-sm shadow-md"
                             >
                                 <FaMapMarkerAlt className="mr-3 text-gray-400" />
                                 <input
@@ -44,40 +44,39 @@ export default function Hero() {
                                 List Your Property
                             </button>
                         </form>
-
-                        {/* Filter Form */}
-                        <form className="mt-8 w-full max-w-4xl flex flex-row sm:flex-row items-center justify-center gap-4 bg-white rounded-2xl sm:rounded-full px-8 py-4 shadow-lg">
-                            <select
-                                aria-label="For Rent or For Sale"
-                                className="appearance-none cursor-pointer text-blue-800  text-sm font-normal rounded-full border border-gray-300 px-2 py-2 pr-5 max-w-[160px] sm:max-w-[180px] focus:outline-none focus:ring-2 focus:ring-[#1E2A78] focus:border-transparent sm:px-6 sm:py-3"
-                            >
-                                <option>For Rent</option>
-                                <option>For Sale</option>
-                            </select>
-                            <select
-                                aria-label="Property Type"
-                                className="appearance-none cursor-pointer text-blue-700 text-sm font-normal rounded-full border border-gray-300 px-1 py-2 pr-5 max-w-[160px] sm:max-w-[180px] focus:outline-none focus:ring-2 focus:ring-[#1E2A78] focus:border-transparent sm:px-6 sm:py-3"
-                            >
-                                <option>House</option>
-                                <option>Apartment</option>
-                                <option>Condo</option>
-                            </select>
-                            <select
-                                aria-label="Location"
-                                className="appearance-none cursor-pointer  text-blue-700  text-sm font-normal rounded-full border border-gray-300 px-1 py-2 pr-5 max-w-[160px] sm:max-w-[180px] focus:outline-none focus:ring-2 focus:ring-[#1E2A78] focus:border-transparent sm:px-6 sm:py-3"
-                            >
-                                <option>Indonesia</option>
-                                <option>USA</option>
-                                <option>UK</option>
-                            </select>
-                            <button
-                              
-                                className="bg-[#1E2A78] text-white font-semibold text-sm rounded-full px-3 py-3 shadow-md hover:bg-[#16215a] transition whitespace-nowrap sm:px-6 sm:py-3"
-                            >
-                                Find 
-                            </button>
-                        </form>
                     </div>
+
+                    {/* Filter Form - half inside, half outside */}
+                    <form className="absolute left-1/2 bottom-2 transform -translate-x-1/2 translate-y-1/2 w-full max-w-4xl flex flex-row items-center justify-center gap-4 bg-white rounded-2xl sm:rounded-full px-6 py-4 shadow-lg">
+                        <select
+                            aria-label="For Rent or For Sale"
+                            className="appearance-none cursor-pointer text-blue-800 text-sm font-normal rounded-full border border-gray-300 px-4 py-2 pr-5 focus:outline-none focus:ring-2 focus:ring-[#1E2A78] focus:border-transparent"
+                        >
+                            <option>For Rent</option>
+                            <option>For Sale</option>
+                        </select>
+                        <select
+                            aria-label="Property Type"
+                            className="appearance-none cursor-pointer text-blue-700 text-sm font-normal rounded-full border border-gray-300 px-4 py-2 pr-5 focus:outline-none focus:ring-2 focus:ring-[#1E2A78] focus:border-transparent"
+                        >
+                            <option>House</option>
+                            <option>Apartment</option>
+                            <option>Condo</option>
+                        </select>
+                        <select
+                            aria-label="Location"
+                            className="appearance-none cursor-pointer text-blue-700 text-sm font-normal rounded-full border border-gray-300 px-4 py-2 pr-5 focus:outline-none focus:ring-2 focus:ring-[#1E2A78] focus:border-transparent"
+                        >
+                            <option>Indonesia</option>
+                            <option>USA</option>
+                            <option>UK</option>
+                        </select>
+                        <button
+                            className="bg-[#1E2A78] text-white font-semibold text-sm rounded-full px-6 py-2 shadow-md hover:bg-[#16215a] transition whitespace-nowrap"
+                        >
+                            Find
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

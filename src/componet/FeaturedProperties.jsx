@@ -1,71 +1,79 @@
-// src/components/FeaturedProperties.jsx
-import { FaExternalLinkAlt, FaHome, FaMapMarkerAlt, FaChevronDown } from "react-icons/fa";
+import React from "react";
+import {
+    FaExternalLinkAlt,
+    FaHome,
+    FaCrosshairs,
+    FaChevronDown,
+} from "react-icons/fa";
 
-export default function FeaturedProperties() {
+export default function FeaturedProperty() {
     return (
-        <div className="bg-white mt-20 mb-20">
-            <div className="max-w-7xl mx-auto mt-8 rounded-2xl overflow-hidden relative shadow-lg">
-                {/* Background Image */}
-                <div className="w-full h-64 md:h-80 lg:h-[400px] relative">
-                    <img
-                        src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-                        alt="Modern house exterior"
-                        className="w-full h-full object-cover rounded-2xl"
-                        loading="lazy"
-                    />
-                    {/* Overlay Content */}
-                    <div className="absolute inset-0 bg-opacity-40 rounded-2xl flex flex-col justify-center px-4 py-8 sm:px-8 sm:py-16 md:px-16 lg:px-20">
-                        <h1 className="text-white font-semibold text-xl sm:text-2xl md:text-4xl max-w-lg leading-tight sm:leading-snug">
-                            Featured Properties For Sale
-                        </h1>
-                        <p className="text-white text-xs sm:text-base max-w-md mt-2 font-normal">
-                            Discover, Buy, or Rent Verified Properties with Ease.
-                        </p>
-                    </div>
-                </div>
+        <div className="max-w-[1200px] mx-auto mt-10 rounded-3xl overflow-hidden relative">
+            {/* Background Image */}
+            <img
+                src="https://storage.googleapis.com/a1aa/image/023225e3-6b81-479c-0445-58b01f1af41d.jpg"
+                alt="Modern house exterior with large windows and trees in the background during dusk"
+                width="900"
+                height="300"
+                className="w-full h-120 object-cover rounded-3xl"
+            />
 
-                {/* Search Filters */}
-                <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 flex flex-wrap justify-center gap-2 sm:gap-4 rounded-full shadow-xl px-2 py-3 sm:px-6 sm:py-6 max-w-5xl w-[98%] sm:w-[95%] mb-9">
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-opacity-30 rounded-3xl"></div>
 
-                    {/* For Buying */}
-                    <button
-                        type="button"
-                        className="bg-[#2C3E8F] text-white rounded-full px-3 py-1 text-xs sm:px-10 sm:py-4 sm:text-lg font-semibold hover:bg-[#1f2a63] flex items-center whitespace-nowrap"
-                    >
-                        <FaExternalLinkAlt className="text-xs" />
-                        <span className="ml-1">For Buying</span>
-                        <FaChevronDown className="text-xs ml-1" />
-                    </button>
-
-                    {/* House */}
-                    <button
-                        type="button"
-                        className="bg-[#2C3E8F] text-white rounded-full px-3 py-1 text-xs sm:px-10 sm:py-4 sm:text-lg font-semibold hover:bg-[#1f2a63] flex items-center whitespace-nowrap"
-                    >
-                        <FaHome className="text-xs" />
-                        <span className="ml-1">House</span>
-                        <FaChevronDown className="text-xs ml-1" />
-                    </button>
-
-                    {/* Location */}
-                    <button
-                        type="button"
-                        className="bg-[#2C3E8F] text-white rounded-full px-3 py-1 text-xs sm:px-10 sm:py-4 sm:text-lg font-semibold hover:bg-[#1f2a63] flex items-center whitespace-nowrap"
-                    >
-                        <FaMapMarkerAlt className="text-xs" />
-                        <span className="ml-1">Indonesia</span>
-                        <FaChevronDown className="text-xs ml-1" />
-                    </button>
-
-                    {/* Find Property */}
-                    <button
-                        type="button"
-                        className="bg-[#2C3E8F] text-white rounded-full px-3 py-1 text-xs sm:px-10 sm:py-4 sm:text-lg font-semibold hover:bg-[#1f2a63] whitespace-nowrap"
-                    >
-                        <span className="ml-1">Find Property</span>
-                    </button>
-                </div>
+            {/* Text Content */}
+            <div className="absolute top-16 left-10 right-10 text-white">
+                <h1 className="text-3xl font-extrabold leading-tight max-w-lg">
+                    Featured Properties For Sale
+                </h1>
+                <p className="mt-2 text-sm font-normal max-w-md">
+                    Discover, Buy, or Rent Verified Properties with Ease.
+                </p>
             </div>
+
+            {/* Search Form */}
+            <form
+                aria-label="Property search form"
+                className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 sm:bg-white rounded-full shadow-lg flex flex-wrap gap-4 px-6 py-5 max-w-[850px] w-full"
+            >
+                {/* For Buying Button */}
+                <button
+                    type="button"
+                    className="flex items-center gap-2 border border-gray-300 rounded-full px-5 py-2 text-xs text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                >
+                    <FaExternalLinkAlt className="text-xs" />
+                    For Buying
+                    <FaChevronDown className="text-xs" />
+                </button>
+
+                {/* House Button */}
+                <button
+                    type="button"
+                    className="flex items-center gap-2 border border-gray-300 rounded-full px-5 py-2 text-xs text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                >
+                    <FaHome className="text-xs" />
+                    House
+                    <FaChevronDown className="text-xs" />
+                </button>
+
+                {/* Location Button */}
+                <button
+                    type="button"
+                    className="flex items-center gap-2 border border-gray-300 rounded-full px-5 py-2 text-xs text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                >
+                    <FaCrosshairs className="text-xs" />
+                    Indonesia
+                    <FaChevronDown className="text-xs" />
+                </button>
+
+                {/* Find Property Button */}
+                <button
+                    type="submit"
+                    className="ml-auto bg-blue-900 hover:bg-blue-800 text-white rounded-full px-6 py-2 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-blue-600"
+                >
+                    Find Property
+                </button>
+            </form>
         </div>
     );
 }

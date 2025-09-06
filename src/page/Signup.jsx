@@ -63,7 +63,7 @@ export default function Signup() {
             <main className="flex lg:w-[1100px]
              flex-col md:flex-row flex-1 max-w-7xl mx-auto my-8 sm:my-12 md:my-16 px-4 sm:px-8 md:px-12 gap-10 md:gap-16">
                 {/* Left Section - Form */}
-                <section className="order-2  md:order-1 flex flex-col max-w-md w-full p-6 sm:p-8 rounded-2xl shadow">
+                <section className="order-2  md:order-1 flex flex-col max-w-md w-full p-6 sm:p-8 ">
                     <h1 className="text-xl sm:text-2xl font-extrabold text-gray-900 mb-6 text-center md:text-left">
                         Create new account
                     </h1>
@@ -178,7 +178,7 @@ export default function Signup() {
                     <img
                         src="https://storage.googleapis.com/a1aa/image/cf29c0cf-bc79-41f3-eccb-86bf7c198c8b.jpg"
                         alt="Modern house exterior"
-                        className="lg:h-[600px] lg:w-[500px] rounded-t-2xl md:rounded-tl-3xl md:rounded-bl-3xl w-full max-w-lg object-cover shadow"
+                        className=" lg:h-[700px] lg:w-[600px] rounded-t-2xl md:rounded-tl-3xl md:rounded-bl-3xl w-full max-w-lg object-cover shadow"
                     />
                 </section>
             </main>
