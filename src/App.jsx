@@ -39,7 +39,7 @@ function App() {
       </Routes>
 
     
-      {!hideLayout && <Footer />}
+       <Footer />
 
     
       <a
