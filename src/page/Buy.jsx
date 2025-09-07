@@ -4,7 +4,7 @@ import FeaturedProperty from '../componet/FeaturedProperty'
 function Buy() {
   return (
     <div>
-          <FeaturedProperties></FeaturedProperties>
+          <FeaturedProperties/>
           <FeaturedProperty></FeaturedProperty>
     </div>
   )

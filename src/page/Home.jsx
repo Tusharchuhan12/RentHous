@@ -3,14 +3,18 @@ import Hero from '../componet/Hero'
 import Journey from '../componet/Journey'
 import RealEstateSection from '../componet/RealEstateSection'
 import PrppertyList from '../componet/PrppertyList'
+import WhatWeDo from '../componet/WhatWeDo'
+import RentalHomes from '../componet/RentalHomes'
 function Home() {
   return (
     <div>
-     <Hero></Hero>
-    
-      <RealEstateSection></RealEstateSection>
-      <PrppertyList></PrppertyList>
-      <Journey></Journey>
+     <Hero/>
+     <WhatWeDo></WhatWeDo>
+      <RealEstateSection/>
+  
+      <PrppertyList/>
+      <RentalHomes></RentalHomes>
+      <Journey/>
     </div>
   )
 }

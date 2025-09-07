@@ -37,7 +37,7 @@ export default function PropertyList() {
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6">
                 <div>
-                    <h2 className="text-xl sm:text-2xl font-semibold leading-tight text-[#0B1E55]">
+                    <h2 className="text-2xl font-extrabold sm:text-2xl  leading-tight text-[#1B3666]">
                         Best Properties Available For Sale
                     </h2>
                     <p className="text-gray-600 text-sm sm:text-base max-w-xl mt-1">

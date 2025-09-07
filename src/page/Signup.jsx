@@ -1,46 +1,36 @@
+// src/components/Signup.jsx
 import { useState } from "react";
-import { FaArrowLeft, FaArrowRight, FaEnvelope, FaEye } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaEye, FaEnvelope, FaApple, FaFacebookF, FaGoogle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-
 
 export default function Signup() {
     const navigate = useNavigate();
-  
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         password: "",
         confirmPassword: "",
     });
-
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-    const [error, setError] = useState(""); 
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.id]: e.target.value });
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        setError("");
-        if (formData.password !== formData.confirmPassword) {
-            setError("Passwords do not match");
-            return;
-        }
-        try {
-            await signup(formData.email, formData.password);
-            navigate("/Home");
-        } catch (err) {
-            setError(err.message || "Signup failed");
-        }
+        console.log(formData);
+        // API call logic here
+        navigate("/Home");
     };
 
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="bg-white min-h-[700px]">
             {/* Header */}
             <header className="flex justify-between items-center px-4 sm:px-6 lg:px-12 py-4 bg-white border-b border-gray-200">
-                <button onClick={() => navigate("/Home")} 
+                <button
+                    onClick={() => navigate("/Home")}
                     aria-label="Back to Homepage"
                     className="flex items-center gap-2 text-gray-700 text-xs sm:text-sm rounded-full border border-gray-400 px-3 sm:px-4 py-2 hover:bg-gray-100 transition"
                 >
@@ -48,7 +38,6 @@ export default function Signup() {
                     Back to Homepage
                 </button>
                 <div className="flex items-center gap-2 font-bold text-base sm:text-lg text-gray-900">
-                  
                     <span>PropBot</span>
                 </div>
                 <button
@@ -60,125 +49,141 @@ export default function Signup() {
             </header>
 
             {/* Main */}
-            <main className="flex lg:w-[1100px]
-             flex-col md:flex-row flex-1 max-w-7xl mx-auto my-8 sm:my-12 md:my-16 px-4 sm:px-8 md:px-12 gap-10 md:gap-16">
+            <main className="flex flex-col md:flex-row w-full mt-10">
                 {/* Left Section - Form */}
-                <section className="order-2  md:order-1 flex flex-col max-w-md w-full p-6 sm:p-8 ">
-                    <h1 className="text-xl sm:text-2xl font-extrabold text-gray-900 mb-6 text-center md:text-left">
-                        Create new account
-                    </h1>
+                <section className=" mt-10 order-2 md:order-1 md:w-[500px] max-w-full px-6 md:px-12 lg:px-16 flex flex-col justify-center">
+                    <h2 className="font-extrabold text-2xl mb-6 text-gray-900">Sign Up</h2>
 
-                    {/* Show error if any */}
-                    {error && (
-                        <div className="text-red-600 text-sm mb-2 text-center">{error}</div>
-                    )}
-
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                    <form onSubmit={handleSubmit} className="space-y-6">
                         {/* Name */}
-                        <div className="flex flex-col gap-1">
-                            <label
-                                htmlFor="name"
-                                className="text-sm font-semibold text-gray-900"
-                            >
-                                Name
+                        <div>
+                            <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-1">
+                                Full Name
                             </label>
                             <input
                                 id="name"
+                                name="name"
                                 type="text"
-                                placeholder="Enter Your Full Name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="border border-[#1F3C88] rounded-lg px-4 py-3 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1F3C88]"
+                                placeholder="Enter Your Full Name"
+                                required
+                                className="w-full rounded-md border border-gray-300 px-4 py-2 text-gray-500 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
                             />
                         </div>
 
                         {/* Email */}
-                        <div className="flex flex-col gap-1 relative">
-                            <label
-                                htmlFor="email"
-                                className="text-sm font-semibold text-gray-900"
-                            >
+                        <div>
+                            <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-1">
                                 Email Address
                             </label>
-                            <input
-                                id="email"
-                                type="email"
-                                placeholder="Enter Your Email Id"
-                                value={formData.email}
-                                onChange={handleChange}
-                                className="border border-[#1F3C88] rounded-lg px-4 py-3 pr-12 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1F3C88]"
-                            />
-                            <FaEnvelope className="absolute right-4 top-[38px] text-gray-400" />
+                            <div className="relative">
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    placeholder="Enter Your Email Id"
+                                    autoComplete="email"
+                                    required
+                                    className="w-full rounded-md border border-gray-300 px-4 py-2 pr-10 text-gray-500 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
+                                />
+                                <FaEnvelope className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-base pointer-events-none" />
+                            </div>
                         </div>
 
                         {/* Password */}
-                        <div className="flex flex-col gap-1 relative">
-                            <label
-                                htmlFor="password"
-                                className="text-sm font-semibold text-gray-900"
-                            >
+                        <div>
+                            <label htmlFor="password" className="block text-sm font-semibold text-gray-900 mb-1">
                                 Password
                             </label>
-                            <input
-                                id="password"
-                                type={showPassword ? "text" : "password"}
-                                placeholder="Enter Your Password"
-                                value={formData.password}
-                                onChange={handleChange}
-                                className="border border-[#1F3C88] rounded-lg px-4 py-3 pr-12 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1F3C88]"
-                            />
-                            <FaEye
-                                onClick={() => setShowPassword(!showPassword)}
-                                className="absolute right-4 top-[38px] text-gray-400 cursor-pointer"
-                            />
+                            <div className="relative">
+                                <input
+                                    id="password"
+                                    name="password"
+                                    type={showPassword ? "text" : "password"}
+                                    value={formData.password}
+                                    onChange={handleChange}
+                                    placeholder="Enter Your Password"
+                                    autoComplete="new-password"
+                                    required
+                                    className="w-full rounded-md border border-gray-300 px-4 py-2 pr-10 text-gray-400 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
+                                />
+                                <FaEye
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-base cursor-pointer"
+                                />
+                            </div>
                         </div>
 
                         {/* Confirm Password */}
-                        <div className="flex flex-col gap-1 relative">
-                            <label
-                                htmlFor="confirmPassword"
-                                className="text-sm font-semibold text-gray-900"
-                            >
+                        <div>
+                            <label htmlFor="confirmPassword" className="block text-sm font-semibold text-gray-900 mb-1">
                                 Confirm Password
                             </label>
-                            <input
-                                id="confirmPassword"
-                                type={showConfirmPassword ? "text" : "password"}
-                                placeholder="Confirm Your Password"
-                                value={formData.confirmPassword}
-                                onChange={handleChange}
-                                className="border border-[#1F3C88] rounded-lg px-4 py-3 pr-12 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1F3C88]"
-                            />
-                            <FaEye
-                                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                                className="absolute right-4 top-[38px] text-gray-400 cursor-pointer"
-                            />
+                            <div className="relative">
+                                <input
+                                    id="confirmPassword"
+                                    name="confirmPassword"
+                                    type={showConfirmPassword ? "text" : "password"}
+                                    value={formData.confirmPassword}
+                                    onChange={handleChange}
+                                    placeholder="Confirm Your Password"
+                                    required
+                                    className="w-full rounded-md border border-gray-300 px-4 py-2 pr-10 text-gray-400 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
+                                />
+                                <FaEye
+                                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-base cursor-pointer"
+                                />
+                            </div>
                         </div>
 
-                        {/* Submit Button */}
+                        {/* Signup Button */}
                         <button
                             type="submit"
-                            className="bg-[#1F3C88] text-white text-base font-medium rounded-full py-3 mt-4 hover:bg-[#172e6a] transition"
+                            className="w-full bg-[#1E2F7D] text-white text-base font-normal rounded-full py-3 mt-3 hover:bg-[#17255a] focus:outline-none focus:ring-2 focus:ring-blue-600"
                         >
-                            Create Account
+                            SignUp
                         </button>
                     </form>
 
-                    {/* Already have an account */}
-                    <p className="text-xs sm:text-sm text-gray-600 text-center mt-6">
+                    {/* Divider */}
+                    <div className="flex items-center my-8">
+                        <hr className="flex-grow border-gray-300" />
+                        <span className="mx-3 text-xs text-gray-400 font-semibold">OR CONTINUE WITH</span>
+                        <hr className="flex-grow border-gray-300" />
+                    </div>
+
+                    {/* Social Icons */}
+                    <div className="flex items-center justify-center gap-10 text-2xl">
+                        <button aria-label="Continue with Apple" className="text-black hover:text-gray-700">
+                            <FaApple />
+                        </button>
+                        <button aria-label="Continue with Facebook" className="text-[#1877F2] hover:text-[#145dbf]">
+                            <FaFacebookF />
+                        </button>
+                        <button aria-label="Continue with Google" className="text-[#4285F4] hover:text-[#3367d6]">
+                            <FaGoogle />
+                        </button>
+                    </div>
+
+                    {/* Login link */}
+                    <p className="text-center text-gray-700 mt-8 text-base sm:text-lg">
                         Already have an account?{" "}
-                        <a href="Login" className="font-bold text-[#1F3C88] hover:underline">
+                        <a href="Login" className="font-bold text-gray-900 hover:underline">
                             Log In
                         </a>
                     </p>
                 </section>
 
                 {/* Right Section - Image */}
-                <section className="order-1 md:order-2 flex-1 flex justify-center items-center">
+                <section className="order-1 md:order-2 md:flex-1 flex justify-end">
                     <img
                         src="https://storage.googleapis.com/a1aa/image/cf29c0cf-bc79-41f3-eccb-86bf7c198c8b.jpg"
                         alt="Modern house exterior"
-                        className=" lg:h-[700px] lg:w-[600px] rounded-t-2xl md:rounded-tl-3xl md:rounded-bl-3xl w-full max-w-lg object-cover shadow"
+                        className="w-full h-[500px] object-cover rounded-tl-3xl rounded-bl-3xl lg:h-[600px]"
                     />
                 </section>
             </main>

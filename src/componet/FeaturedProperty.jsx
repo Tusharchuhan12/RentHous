@@ -1,8 +1,9 @@
-import React from "react";
+// src/components/FeaturedProperty.jsx
+import { FaMapMarkerAlt, FaBookmark } from "react-icons/fa";
 
 export default function FeaturedProperty() {
     return (
-        <div className="bg-white text-gray-700 min-[400px]:">
+        <div className="bg-white text-gray-700 mb-6">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
                 {/* Header */}
                 <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
@@ -11,12 +12,12 @@ export default function FeaturedProperty() {
                     </h2>
                     <button
                         type="button"
-                        className="mt-4 sm:mt-0 inline-flex items-center border border-[#1E3A8A] text-[#1E3A8A] text-sm font-medium rounded-full px-4 py-1 hover:bg-[#1E3A8A] hover:text-white transition"
+                        className="mt-4 sm:mt-0 w-full sm:w-auto border border-[#1E2A78] text-[#1E2A78] font-semibold rounded-full px-5 py-3 hover:bg-[#1E2A78] hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
                     >
                         See 268 New Projects
                         <svg
                             aria-hidden="true"
-                            className="ml-1 w-3 h-3"
+                            className="ml-1 w-4 h-4"
                             fill="none"
                             stroke="currentColor"
                             strokeLinecap="round"
@@ -37,14 +38,12 @@ export default function FeaturedProperty() {
                         <img
                             src="https://storage.googleapis.com/a1aa/image/564b07be-a1ad-4cf1-1ad0-a9c3e74409b7.jpg"
                             alt="Modern house exterior at twilight with warm lights glowing from windows and garage doors, surrounded by a green lawn and clear blue sky"
-                            className="w-full h-70 object-cover rounded-t-xl"
-                            width="200"
-                            height="120px"
+                            className="w-full h-72 object-cover rounded-t-xl"
                         />
                         <div className="bg-white p-5 rounded-b-xl shadow-md relative -mt-10 mx-4 mb-4">
                             <div className="flex justify-between items-start mb-2">
                                 <div className="flex items-center space-x-2">
-                                    <i className="fas fa-map-marker-alt text-[#1E3A8A]"></i>
+                                    <FaMapMarkerAlt className="text-[#1E3A8A]" />
                                     <h3 className="text-[#1E3A8A] font-semibold text-lg leading-tight">
                                         Green Villa, Uttar Pradesh
                                     </h3>
@@ -53,18 +52,18 @@ export default function FeaturedProperty() {
                                     aria-label="Bookmark"
                                     className="text-[#1E3A8A] hover:text-[#374785]"
                                 >
-                                    <i className="fas fa-bookmark"></i>
+                                    <FaBookmark />
                                 </button>
                             </div>
                             <p className="text-xs text-gray-500 mb-4">
                                 Spacious 3BHK apartment in a prime location with modern
                                 amenities.
                             </p>
-                            <div className="flex justify-between items-center">
+                            <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
                                 <span className="font-bold text-base">$450,000</span>
                                 <button
                                     type="button"
-                                    className="bg-[#1E3A8A] text-white text-xs font-semibold rounded-full px-4 py-1 hover:bg-[#374785] transition"
+                                    className="w-full sm:w-auto bg-[#1E2A78] text-white font-semibold text-sm rounded-full px-5 py-3 hover:bg-[#16215a] transition-all duration-300 flex items-center justify-center gap-2"
                                 >
                                     Know More
                                 </button>
@@ -77,14 +76,12 @@ export default function FeaturedProperty() {
                         <img
                             src="https://storage.googleapis.com/a1aa/image/85815a70-14d8-40ce-61df-94fc43af3ea9.jpg"
                             alt="Cozy suburban house with gray siding, multiple windows, a green lawn with trees and bushes, under a sunny sky"
-                            className="w-full h-70 object-cover rounded-t-xl"
-                            width="200"
-                            height="120"
+                            className="w-full h-72 object-cover rounded-t-xl"
                         />
                         <div className="bg-white p-5 rounded-b-xl shadow-md relative -mt-10 mx-4 mb-4">
                             <div className="flex justify-between items-start mb-2">
                                 <div className="flex items-center space-x-2">
-                                    <i className="fas fa-map-marker-alt text-[#1E3A8A]"></i>
+                                    <FaMapMarkerAlt className="text-[#1E3A8A]" />
                                     <h3 className="text-[#1E3A8A] font-semibold text-lg leading-tight">
                                         Green Villa, Uttar Pradesh
                                     </h3>
@@ -93,18 +90,18 @@ export default function FeaturedProperty() {
                                     aria-label="Bookmark"
                                     className="text-[#1E3A8A] hover:text-[#374785]"
                                 >
-                                    <i className="fas fa-bookmark"></i>
+                                    <FaBookmark />
                                 </button>
                             </div>
                             <p className="text-xs text-gray-500 mb-4">
                                 Spacious 3BHK apartment in a prime location with modern
                                 amenities.
                             </p>
-                            <div className="flex justify-between items-center">
+                            <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
                                 <span className="font-bold text-base">$450,000</span>
                                 <button
                                     type="button"
-                                    className="bg-[#1E3A8A] text-white text-xs font-semibold rounded-full px-4 py-1 hover:bg-[#374785] transition"
+                                    className="w-full sm:w-auto bg-[#1E2A78] text-white font-semibold text-sm rounded-full px-5 py-3 hover:bg-[#16215a] transition-all duration-300 flex items-center justify-center gap-2"
                                 >
                                     Know More
                                 </button>

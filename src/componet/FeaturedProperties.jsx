@@ -8,14 +8,14 @@ import {
 
 export default function FeaturedProperty() {
     return (
-        <div className="max-w-[1200px] mx-auto mt-10 rounded-3xl overflow-hidden relative">
+        <div className="max-w-[1200px] mx-auto mt-10 rounded-3xl relative pb-20 sm:pb-10">
             {/* Background Image */}
             <img
                 src="https://storage.googleapis.com/a1aa/image/023225e3-6b81-479c-0445-58b01f1af41d.jpg"
                 alt="Modern house exterior with large windows and trees in the background during dusk"
                 width="900"
                 height="300"
-                className="w-full h-120 object-cover rounded-3xl"
+                className="w-full h-110 md:h-120 object-cover rounded-3xl"
             />
 
             {/* Overlay */}
@@ -31,45 +31,45 @@ export default function FeaturedProperty() {
                 </p>
             </div>
 
-            {/* Search Form */}
+            {/* Search Form with Hero-like buttons */}
             <form
                 aria-label="Property search form"
-                className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white rounded-2xl sm:rounded-full shadow-lg flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-4 sm:px-6 py-3 sm:py-5 max-w-[850px] w-full"
+                className="absolute bottom-0 sm:-bottom-6 mx-1 left-1/2 transform -translate-x-1/2 bg-white rounded-2xl shadow-lg flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-4 sm:px-6 py-4 max-w-[850px] w-full"
             >
                 {/* For Buying Button */}
                 <button
                     type="button"
-                    className="flex items-center gap-2 border border-gray-300 rounded-full px-4 sm:px-5 py-2 text-xs sm:text-sm text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    className="w-full sm:w-auto flex items-center gap-2 border border-[#1E2A78] text-[#1E2A78] font-semibold rounded-full px-5 py-3 hover:bg-[#1E2A78] hover:text-white transition-all duration-300 whitespace-nowrap"
                 >
-                    <FaExternalLinkAlt className="text-xs" />
+                    <FaExternalLinkAlt className="text-sm" />
                     For Buying
-                    <FaChevronDown className="text-xs" />
+                    <FaChevronDown className="text-sm" />
                 </button>
 
                 {/* House Button */}
                 <button
                     type="button"
-                    className="flex items-center gap-2 border border-gray-300 rounded-full px-4 sm:px-5 py-2 text-xs sm:text-sm text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    className="w-full sm:w-auto flex items-center gap-2 border border-[#1E2A78] text-[#1E2A78] font-semibold rounded-full px-5 py-3 hover:bg-[#1E2A78] hover:text-white transition-all duration-300 whitespace-nowrap"
                 >
-                    <FaHome className="text-xs" />
+                    <FaHome className="text-sm" />
                     House
-                    <FaChevronDown className="text-xs" />
+                    <FaChevronDown className="text-sm" />
                 </button>
 
                 {/* Location Button */}
                 <button
                     type="button"
-                    className="flex items-center gap-2 border border-gray-300 rounded-full px-4 sm:px-5 py-2 text-xs sm:text-sm text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    className="w-full sm:w-auto flex items-center gap-2 border border-[#1E2A78] text-[#1E2A78] font-semibold rounded-full px-5 py-3 hover:bg-[#1E2A78] hover:text-white transition-all duration-300 whitespace-nowrap"
                 >
-                    <FaCrosshairs className="text-xs" />
+                    <FaCrosshairs className="text-sm" />
                     Indonesia
-                    <FaChevronDown className="text-xs" />
+                    <FaChevronDown className="text-sm" />
                 </button>
 
                 {/* Find Property Button */}
                 <button
                     type="submit"
-                    className="w-full sm:w-auto bg-blue-900 hover:bg-blue-800 text-white rounded-full px-5 sm:px-6 py-2 text-xs sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    className="w-full sm:w-auto bg-[#1E2A78] text-white font-semibold rounded-full px-5 py-3 hover:bg-[#16215a] transition-all duration-300 whitespace-nowrap flex items-center justify-center gap-2"
                 >
                     Find Property
                 </button>
